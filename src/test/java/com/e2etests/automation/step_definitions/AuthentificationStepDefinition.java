@@ -16,13 +16,14 @@ public class AuthentificationStepDefinition {
 		this.authentificationcationPage = new AuthentificationcationPage();
 	}
 
+	/*Login*/
 	@Given("Je me connecte à l application OrangeHRM")
 	public void jeMeConnecteÀLApplicationOrangeHRM() {
 		authentificationcationPage.goToUrl();
 
 	}
 
-	@When("je saisie le username {string}")
+	@When("Je saisie le username {string}")
 	public void jeSaisieLeUsername(String username) {
 
 		authentificationcationPage.fillUsername(username);
@@ -49,5 +50,23 @@ public class AuthentificationStepDefinition {
 		Assert.assertTrue(message.contains(msg));
 
 	}
+	
+	/*Logout*/
+	
+	@When("Je clique sur l icone logout")
+	public void jeCliqueSurLIconeLogout() {
+		
+		authentificationcationPage.clickOnIconeLogout();;
+	 
+	}
+		
+	@When("Je clique sur le boutton logout")
+	public void jeCliqueSurLeBouttonLogout() throws InterruptedException {
+		Thread.sleep(2000);
+		authentificationcationPage.clickOnBtnLogout();
+	}
+
+
+
 
 }
