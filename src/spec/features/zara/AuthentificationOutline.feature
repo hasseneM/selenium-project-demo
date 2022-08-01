@@ -13,6 +13,6 @@ Feature: Authentification sur l application Zara
 
     Examples: 
       | email                           | password    |
-      | mailto:samehaouichaoui@yahoo.fr | samah2020AB |
+      | mailto:samehaouichaoui@yahoo.fr | sssssamah2020AB |
       | mailto:rim@gmail.com            | rim123      |
       | mailto:amine@gmail.com          | amine123    |
